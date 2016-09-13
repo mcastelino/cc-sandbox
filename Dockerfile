@@ -26,6 +26,19 @@ RUN swupd update -s && \
     swupd update && \
     swupd bundle-add containers-basic
 
+#Run swupd multiple time for now so that we upgrade across format bumps    
+RUN swupd update -s && \
+    swupd update
+    
+RUN swupd update -s && \
+    swupd update
+
+RUN swupd update -s && \
+    swupd update
+
+RUN swupd update -s && \
+    swupd update
+
 RUN mkdir -p /var/run/ && \
     mkdir -p /etc/docker/ && \
     mkdir -p /run/opencontainer/containers/
