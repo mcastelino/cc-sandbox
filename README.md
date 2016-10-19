@@ -26,5 +26,5 @@ The container needs to run as privileged in order to launch docker clear contain
 ```
 git clone https://github.com/mcastelino/cc-sandbox
 cd cc-sandbox
-sudo docker build --build-arg HTTP_PROXY="your proxy if needed" --build-arg HTTPS_PROXY="your proxy if needed" -t mcastelino/cc-sandbox .
+sudo docker build --build-arg HTTP_PROXY=$http_proxy --build-arg HTTPS_PROXY=$https_proxy -t mcastelino/cc-sandbox .
 ```
