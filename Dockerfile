@@ -43,6 +43,6 @@ RUN mkdir -p /var/run/ && \
     mkdir -p /etc/docker/ && \
     mkdir -p /run/opencontainer/containers/
 
-RUN echo "dockerd --add-runtime cor=/usr/bin/cc-oci-runtime --default-runtime=cor --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 --storage-driver=vfs &" > /run_dockerd && chmod +x /run_dockerd
+RUN echo "dockerd --add-runtime cor=/usr/bin/cc-oci-runtime --default-runtime=cor --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 --storage-driver=vfs &> /tmp/docker.log &" > /run_dockerd && chmod +x /run_dockerd
 
 CMD ["/bin/bash"]
