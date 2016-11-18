@@ -11,12 +11,6 @@ The container needs to run as privileged in order to launch docker clear contain
 
 ## To launch containers within this container
 
-### Launch the docker daemon
-```
-./run_dockerd
-```
-
-### Launch a clear container
 ```
  docker run -it debian
 ```
