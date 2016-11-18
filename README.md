@@ -4,7 +4,7 @@ A containerized environment for Clear Containers 2.0 cc-oci-runtime.  This allow
 
 ## Running this container
 ```
-sudo docker run -it -e HTTP_PROXY=$http_proxy -e HTTPS_PROXY=$https_proxy --privileged mcastelino/cc-sandbox
+sudo docker run -it -e HTTP_PROXY=$http_proxy -e HTTPS_PROXY=$https_proxy --privileged clearcontainers/clearlinux
 ```
 
 The container needs to run as privileged in order to launch docker clear containers. Also the proxy settings, if any; need to be propagated into the container as the docker daemon which runs within the container will need to reach out to the image repositories.
